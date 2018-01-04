@@ -1,7 +1,7 @@
 <h1 align=center>天气预报</h1>
 
 ### 开始
-1. 安装 Node.js
+#### 1. 安装 Node.js
 
 [下载地址](https://nodejs.org/zh-cn/download/)
 
@@ -11,7 +11,7 @@ node -v
 ```
 有正确输出则安装成功
 
-2. 安装插件
+#### 2. 安装插件
 在命令行中输入
 ```
 npm install -g shining-weather

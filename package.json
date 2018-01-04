@@ -1,6 +1,6 @@
 {
   "name": "shining-weather",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "How's the weather like today?",
   "preferGlobal": true,
   "main": "index.js",

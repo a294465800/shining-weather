@@ -1,10 +1,15 @@
 {
   "name": "shining-weather",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "How's the weather like today?",
+  "preferGlobal": true,
   "main": "index.js",
   "bin": {
     "weather": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a294465800/shining-weather.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

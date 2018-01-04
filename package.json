@@ -1,0 +1,21 @@
+{
+  "name": "shining-weather",
+  "version": "1.0.0",
+  "description": "How's the weather like today?",
+  "main": "index.js",
+  "bin": {
+    "weather": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shining",
+    "weather"
+  ],
+  "author": "SHININGJACK",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
+}

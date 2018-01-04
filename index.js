@@ -20,7 +20,7 @@ if (process.argv[3] === 'forecast') {
 
 function getForcast(data){
   data.forEach((value, index) => {
-    console.log('-----------------------------------------------')
+    console.log('\x1b[32m%s\x1b[0m', '-----------------------------------------------')
     console.log(`日期：${value.date}`)
     console.log(`天气：${value.type}`)
     console.log(`日出时间：${value.sunrise}    日落时间：${value.sunset}`)
@@ -35,13 +35,16 @@ axios.get(host, data)
     const weather_info = res.data
     const weather = res.data.data
     const date = `${weather_info.date.substring(0,4)}-${weather_info.date.substring(4,6)}-${weather_info.date.substring(6,8)}`
+    console.log('\x1b[32m%s\x1b[0m', '-----------------------------------------------')
+    console.log('\x1b[35m%s\x1b[0m','当前查询')
+    console.log('\x1b[32m%s\x1b[0m', '-----------------------------------------------')
     console.log(`当前城市：${weather_info.city}`)
     console.log(`当前日期：${ new Date(date)}`)
     console.log(`温度：${weather.wendu}℃    湿度：${weather.shidu}    pm2.5：${weather.pm25}`)
     console.log(`空气质量： ${weather.quality}    适宜活动：${weather.ganmao}`)
-    console.log('-----------------------------------------------')
-    console.log('昨日天气')
-    console.log('-----------------------------------------------')
+    console.log('\x1b[32m%s\x1b[0m', '-----------------------------------------------')
+    console.log('\x1b[35m%s\x1b[0m','昨日天气')
+    console.log('\x1b[32m%s\x1b[0m', '-----------------------------------------------')
     const yesterday = weather.yesterday
     console.log(`昨天日期：${yesterday.date}`)
     console.log(`天气：${yesterday.type}`)
@@ -50,8 +53,8 @@ axios.get(host, data)
     console.log(`风向：${yesterday.fx}    风力：${yesterday.fl}`)
     console.log(`适宜活动：${yesterday.notice}`)
     if(forecast){
-      console.log('-----------------------------------------------')
-      console.log(`天气预测`)
+      console.log('\x1b[32m%s\x1b[0m', '-----------------------------------------------')
+      console.log('\x1b[35m%s\x1b[0m',`天气预测`)
       getForcast(weather.forecast)
     }
   })
